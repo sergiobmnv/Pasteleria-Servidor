@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pastelería</title>
+    <link rel="stylesheet" th:href="@{/Css/inicio.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la Pastelería</h1>
+        <p>Seleccione una opción:</p>
+        <div class="button-container">
+            <a href="/usuarios/registroCliente" class="button">Registrar Cliente</a>
+            <a href="/empleados/registroEmpleado" class="button">Registrar Empleado</a>
+            <a href="/productos/encargar" class="button">Encargar un Producto</a>
+            <a href="/usuarios/lista" class="button">Ver Lista de Clientes</a>
+            <a href="/empleados/lista" class="button">Ver Lista de Empleados</a>
+        </div>
+    </div>
+</body>
+</html>

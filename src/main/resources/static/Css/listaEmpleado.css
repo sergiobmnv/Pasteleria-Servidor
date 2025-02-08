@@ -1,0 +1,42 @@
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff7f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ecdcc7;
+}
+
+th {
+    background-color: #d2691e; /* Color de fondo de los encabezados */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fffaf0;
+}
+
+/* Botón de acción */
+.button {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #a0522d;
+}

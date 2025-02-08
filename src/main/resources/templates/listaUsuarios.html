@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" th:href="@{/Css/listaUsuarios.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    
+    <table>
+        <thead>
+            <tr>
+            	<th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Correo Electrónico</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario : ${usuarios}">
+            	<td th:text="${usuario.nombre}"></td>
+                <td th:text="${usuario.apellido}"></td>
+                <td th:text="${usuario.direccion}"></td>
+                <td th:text="${usuario.telefono}"></td>
+                <td th:text="${usuario.email}"></td>
+                <td>
+                    
+                    <form th:action="@{/usuarios/eliminar/{id}(id=${usuario.id})}" method="post">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(usuarios)}">
+                <td colspan="8" style="text-align: center;">No hay clientes registrados.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/usuarios/registroCliente">Registrar Nuevo Cliente</a>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

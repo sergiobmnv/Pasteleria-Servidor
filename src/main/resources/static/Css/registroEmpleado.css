@@ -1,0 +1,110 @@
+/* Fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: olive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #fff7f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+    border-radius: 10px;
+    padding: 1rem; /* Espacio reducido */
+    width: 100%;
+    max-width: 500px; /* Ancho más pequeño */
+    text-align: center;
+}
+
+/* Encabezado */
+h1 {
+    color: #d2691e;
+    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Tamaño reducido */
+    font-weight: bold;
+}
+
+/* Formularios y entradas */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Etiquetas de los campos */
+label {
+    font-size: 0.8rem; /* Tamaño reducido */
+    color: #8b4513;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+/* Campos de texto */
+input, select {
+    width: 100%;
+    padding: 0.4rem; /* Espacio reducido */
+    font-size: 0.8rem; /* Tamaño de texto más pequeño */
+    border: 1px solid #ecdcc7;
+    border-radius: 6px;
+    margin-bottom: 0.5rem; /* Espacio reducido */
+    background-color: #fffaf0;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Campos en foco */
+input:focus, select:focus {
+    border-color: #d2691e;
+}
+
+/* Botón de envío */
+button {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #d2691e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+
+/* Enlace para volver */
+a {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animación de entrada */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

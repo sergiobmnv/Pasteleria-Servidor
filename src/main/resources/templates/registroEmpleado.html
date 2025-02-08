@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro de Empleado</title>
+    <link rel="stylesheet" th:href="@{/Css/registroEmpleado.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Empleado</h1>
+        <form th:action="@{/empleados/registroEmpleado}" th:object="${empleado}" method="post">
+            
+            <label for="username">Nombre del Empleado:</label>
+            <input type="text" id="username" th:field="*{username}" placeholder="Tu nombre de usuario" required />
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" th:field="*{password}" placeholder="Tu contraseña" required />
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" th:field="*{nombre}" placeholder="Tu nombre" required />
+            
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" th:field="*{apellido}" placeholder="Tu apellido" required />
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" th:field="*{telefono}" placeholder="Tu teléfono" required />
+            
+            <label for="fecha_contratacion">Fecha de Contratación:</label>
+            <input type="date" id="fecha_contratacion" th:field="*{fecha_Contratacion}" required />
+            
+            <label for="tipo_Empleado">Tipo de Empleado:</label>
+            <select id="tipo_Empleado" th:field="*{tipo_Empleado}" required>
+                <option value="" disabled selected>Selecciona un tipo</option>
+                <option value="administrador">Administrador</option>
+                <option value="trabajador">Trabajador</option>
+            </select>
+            
+            <button type="submit">Registrar</button>
+        </form>
+        
+        <p th:if="${mensaje}" class="mensaje" th:text="${mensaje}"></p>
+        <a href="/empleados/lista">Ver lista de Empleados</a>
+        <a href = "/">Volver al inicio</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" th:href="@{/Css/listaEmpleado.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Empleados</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Tipo de Empleado</th>
+                    <th>Fecha de Contratación</th>
+                    <th>Hora de Entrada</th>
+                    <th>Hora de Salida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="empleado : ${empleados}">
+                    <td th:text="${empleado.id}"></td>
+                    <td th:text="${empleado.username}"></td>
+                    <td th:text="${empleado.nombre}"></td>
+                    <td th:text="${empleado.apellido}"></td>
+                    <td th:text="${empleado.telefono}"></td>
+                    <td th:text="${empleado.tipo_Empleado}"></td>
+                    <td th:text="${empleado.fecha_Contratacion}"></td>
+                    <td th:text="${empleado.horaEntrada}"></td>
+                    <td th:text="${empleado.horaSalida}"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <a href="/empleados/registroEmpleado" class="button">Registrar Nuevo Empleado</a>
+        <a href = "/">Volver al inicio</a>
+    </div>
+</body>
+</html>

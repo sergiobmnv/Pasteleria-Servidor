@@ -1,0 +1,123 @@
+/* Fondo general */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y amigable */
+    background-color: olive; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #fff7f2; /* Fondo blanco con un toque de calidez */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem; /* Reducido para ocupar menos espacio */
+    width: 100%;
+    max-width: 350px; /* Ancho máximo reducido */
+    text-align: center;
+}
+
+/* Encabezado */
+h1 {
+    color: #d2691e; /* Color café pastel */
+    margin-bottom: 1rem; /* Reducido para menos espacio */
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    font-weight: bold;
+}
+
+/* Formularios y entradas */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Cambiado a stretch para que los inputs ocupen todo el ancho */
+}
+
+label {
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    color: #8b4513; /* Tono chocolate */
+    margin-bottom: 0.3rem; /* Reducido para menos espacio */
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.6rem; /* Reducido para menos espacio */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    border: 1px solid #ecdcc7;
+    border-radius: 6px; /* Radio de borde reducido */
+    margin-bottom: 0.8rem; /* Reducido para menos espacio */
+    background-color: #fffaf0;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #d2691e;
+}
+
+/* Botón */
+button {
+    padding: 0.6rem; /* Reducido para menos espacio */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    color: white;
+    background-color: #d2691e; /* Café pastel */
+    border: none;
+    border-radius: 8px; /* Radio de borde reducido */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #a0522d; /* Tono más oscuro al pasar el mouse */
+}
+
+/* Errores */
+.error {
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
+    color: red;
+    margin-top: -0.5rem; /* Reducido para menos espacio */
+    margin-bottom: 0.5rem; /* Reducido para menos espacio */
+    align-self: flex-start;
+}
+
+/* Mensajes */
+.mensaje {
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    color: #2e8b57; /* Verde pastel */
+    margin-top: 0.8rem; /* Reducido para menos espacio */
+}
+
+/* Enlace */
+a {
+    display: block;
+    margin-top: 1rem; /* Reducido para menos espacio */
+    text-decoration: none;
+    color: #d2691e; /* Café pastel */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animación al cargar */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
